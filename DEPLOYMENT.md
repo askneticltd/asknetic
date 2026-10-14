@@ -107,5 +107,6 @@ They need Python 3 with Pillow (and PyMuPDF for the PDF).
 |---|---|
 | `scripts/make-card-strips.py` | `images-icons/*-strip-*.webp`: the narrow bands the service cards actually show |
 | `scripts/make-about-hero.py` | `images-icons/ceo3-{960,1280,1440,1672}.webp`: the About Us hero, from `ceo3.jpg` (original left untouched) |
+| `scripts/make-service-heroes.py` | `images-icons/visa*.webp` and `car-hire*.webp`: the travel.html and car-hire.html heroes, from `visa.jpg` and `car-hire.jpg` (originals left untouched) |
 | `scripts/compress-profile-pdf.py` | `Asknetic-Company-Profile-web.pdf` from the original (original left untouched) |
 | `scripts/make-brand-icons.py` | `favicon.ico`, `images-icons/favicon-32.png`, `apple-touch-icon.png`, `og-image.jpg` |

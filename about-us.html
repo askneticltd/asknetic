@@ -71,7 +71,7 @@
 
 </style>
 <noscript><style>.fade-up{opacity:1!important;transform:none!important}@media (max-width:1023.98px){#site-header{position:relative!important}#mobilemenu{display:block!important}#mobileSectorsMenu{display:flex!important}#navtoggle,#mobileSectorsBtn{display:none!important}}#navlinks li:hover>#sectorsMenu,#navlinks li:focus-within>#sectorsMenu{display:block!important}#sectorsBtn{display:none!important}</style></noscript>
-<link rel="stylesheet" href="assets/css/site.css?v=789aa2c0">
+<link rel="stylesheet" href="assets/css/site.css?v=14b6f3f7">
 <script src="assets/js/site.js?v=e97ace11" defer></script>
 </head>
 <body class="bg-cream text-ink font-sans antialiased overflow-x-hidden w-full">
@@ -193,20 +193,15 @@
 
 <main id="main" tabindex="-1">
 
-  <!-- HERO -->
-  <section class="on-dark relative bg-navy overflow-hidden pt-14 pb-32 md:pt-20 md:pb-40">
-    <img src="images-icons/ceo3-1280.webp" srcset="images-icons/ceo3-960.webp 960w, images-icons/ceo3-1280.webp 1280w, images-icons/ceo3-1440.webp 1440w, images-icons/ceo3-1672.webp 1672w" sizes="(min-width: 768px) 100vw, (min-width: 416px) 660px, 790px" width="1672" height="941" alt="" aria-hidden="true" loading="eager" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover opacity-90">
+  <!-- HERO: min-h leaves 360px (md: 448px) visible above the stats strip, which overlaps it by 64px (md: 80px): the service-page hero height -->
+  <section class="on-dark relative bg-navy overflow-hidden flex items-center min-h-[424px] md:min-h-[528px] pt-14 pb-32 md:pt-20 md:pb-40">
+    <img src="images-icons/ceo3-1280.webp" srcset="images-icons/ceo3-960.webp 960w, images-icons/ceo3-1280.webp 1280w, images-icons/ceo3-1440.webp 1440w, images-icons/ceo3-1672.webp 1672w" sizes="(min-width: 940px) 100vw, (min-width: 768px) 940px, 768px" width="1672" height="941" alt="" aria-hidden="true" loading="eager" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover opacity-90">
     <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-flame/30 blur-3xl"></div>
     <div class="absolute -bottom-32 -right-16 w-[28rem] h-[28rem] rounded-full bg-flame2/20 blur-3xl"></div>
     <!-- Gradient overlay, darker only behind the text: see .about-hero-overlay in src/site.css -->
     <div class="about-hero-overlay absolute inset-0"></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 text-center">
-      <nav aria-label="Breadcrumb" class="text-xs text-white/90 mb-6">
-        <a href="index.html" class="hover:text-flame2 transition-colors">Home</a>
-        <span class="mx-2">/</span>
-        <span class="text-white font-semibold" aria-current="page">About Us</span>
-      </nav>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 w-full text-center">
       <h1 class="font-display font-bold text-4xl sm:text-5xl md:text-7xl text-white leading-tight mb-6">
         About <span class="bg-gradient-to-r from-flame2 to-flame bg-clip-text text-transparent">Asknetic Group</span>
       </h1>

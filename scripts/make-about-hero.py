@@ -5,11 +5,11 @@ profile). It is not uploaded: only the WebP files below are referenced by the pa
 If the About Us hero should show a different photo, replace ceo3.jpg and run this script again.
 The hero <img> fills its section with object-fit: cover, centred, under a dark gradient overlay. Measured in
 Chrome, the photo renders at these CSS widths (which the <img> sizes attribute repeats):
-- viewports up to 415 px: the box is 442 px tall, so the photo is scaled to the box height (785 px wide)
+- viewports up to 767 px: the box is 424 px tall, so the photo is scaled to the box height (753 px wide)
   and only its centre column shows;
-- 416-767 px: the box is 345-371 px tall, so the photo is about 610-660 px wide (100vw from 640 px);
-- 768 px and wider: the photo is as wide as the viewport (896 px from 768 to 807 px, where the box is 504 px tall).
-At 1x-3x pixel densities that needs 790-2400 device pixels, so the widths below cover phones (1440/1672),
+- 768-939 px: the box is 528 px tall, so the photo is 938 px wide;
+- 940 px and wider: the photo is as wide as the viewport.
+At 1x-3x pixel densities that needs 768-2300 device pixels, so the widths below cover phones (1440/1672),
 laptops (1280/1440) and small 1x windows (960). None is wider than the original, so nothing is upscaled; the
 crop and focal point stay as they are because only the file changes.
 
