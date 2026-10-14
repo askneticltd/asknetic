@@ -9,3 +9,7 @@ private/*
 # Composer / manually uploaded PHPMailer
 vendor/
 PHPMailer/
+
+# Build output and local tooling
+node_modules/
+dist/

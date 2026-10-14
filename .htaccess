@@ -1,0 +1,127 @@
+# Asknetic Group website: Apache settings for cPanel shared hosting (Apache 2.4).
+# Each block is wrapped in <IfModule>, so a module the host lacks is skipped instead of causing a 500 error.
+# Tested locally with Apache 2.4.58 (see DEPLOYMENT.md). Re-check every rule on the live host after upload.
+
+# ---------------------------------------------------------------------------
+# Basics
+# ---------------------------------------------------------------------------
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+AddDefaultCharset utf-8
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+  AddType image/x-icon .ico
+  AddCharset utf-8 .css .js .xml .txt
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # -------------------------------------------------------------------------
+  # HTTPS and canonical host: https://www.askneticgroup.co.tz (the host used by every canonical URL).
+  # Only the production hostnames are redirected, so local and staging copies keep working.
+  # /.well-known/ is left alone so cPanel AutoSSL can validate the certificate.
+  # Before uploading, confirm in cPanel that the SSL certificate covers BOTH askneticgroup.co.tz and
+  # www.askneticgroup.co.tz; if it does not, comment out these two rules until it does.
+  # -------------------------------------------------------------------------
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteCond %{HTTP_HOST} ^askneticgroup\.co\.tz\.?(:[0-9]+)?$ [NC]
+  RewriteRule ^ https://www.askneticgroup.co.tz%{REQUEST_URI} [R=301,L]
+
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteCond %{HTTP_HOST} ^www\.askneticgroup\.co\.tz\.?(:[0-9]+)?$ [NC]
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+  RewriteRule ^ https://www.askneticgroup.co.tz%{REQUEST_URI} [R=301,L]
+
+  # -------------------------------------------------------------------------
+  # Never serve private or development files, even if they are uploaded by mistake (answers 404).
+  # -------------------------------------------------------------------------
+  # Hidden files and folders such as .git/ and .env (but not /.well-known/)
+  RewriteRule (^|/)\.(?!well-known(/|$)) - [R=404,L]
+  # Private, source and tooling folders
+  RewriteRule ^(private|asknetic-private|node_modules|src|scripts|tools|vendor|PHPMailer|dist|drafts)(/|$) - [R=404,NC,L]
+  # Repository, build and log files
+  RewriteRule (^|/)(package(-lock)?\.json|composer\.(json|lock)|tailwind\.config\.js|error_log|[^/]+\.(md|log|ini|sh|bak|old|orig|sql|py|mjs|yml|yaml|lock|swp))$ - [R=404,NC,L]
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Compression (Brotli where available, otherwise gzip)
+# ---------------------------------------------------------------------------
+<IfModule mod_filter.c>
+  <IfModule mod_brotli.c>
+    <IfModule mod_deflate.c>
+      AddOutputFilterByType BROTLI_COMPRESS;DEFLATE text/html text/css text/plain text/xml application/xml application/javascript text/javascript application/json application/ld+json image/svg+xml image/x-icon
+    </IfModule>
+    <IfModule !mod_deflate.c>
+      AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/plain text/xml application/xml application/javascript text/javascript application/json application/ld+json image/svg+xml image/x-icon
+    </IfModule>
+  </IfModule>
+  <IfModule !mod_brotli.c>
+    <IfModule mod_deflate.c>
+      AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/javascript text/javascript application/json application/ld+json image/svg+xml image/x-icon
+    </IfModule>
+  </IfModule>
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Caching
+# HTML is always revalidated. site.css and site.js are cached for a year because every page links
+# them with a content hash (?v=...), which `npm run build` updates whenever they change.
+# Fonts keep fixed names: give a changed font a new file name. Images and the PDF: 30 / 7 days.
+# ---------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType application/pdf "access plus 7 days"
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType text/xml "access plus 1 day"
+  ExpiresByType text/plain "access plus 1 day"
+  # The contact endpoint sends its own "Cache-Control: no-store"
+  <FilesMatch "\.php$">
+    ExpiresActive Off
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.html?$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(css|js|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # -------------------------------------------------------------------------
+  # Security headers
+  # -------------------------------------------------------------------------
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+  # Pages use small inline scripts/styles, so 'unsafe-inline' stays; the policy still limits every other
+  # source to this site, the Google Maps frame on contact.html, and form posts to this site.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src https://www.google.com https://maps.google.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'"
+  Header always unset X-Powered-By
+  Header unset X-Powered-By
+
+  # HSTS: keep this commented out until HTTPS has been verified on BOTH hostnames on the live host.
+  # Then enable it with a short max-age first (e.g. 300), and raise it to 31536000 once all is well.
+  # Header always set Strict-Transport-Security "max-age=300" "expr=%{HTTPS} == 'on'"
+</IfModule>
+
+# Optional: if the private folder is not at ../asknetic-private relative to public_html, tell the
+# contact endpoint where it is (only works where the host allows SetEnv):
+# SetEnv ASKNETIC_PRIVATE_DIR /home/ACCOUNT/asknetic-private

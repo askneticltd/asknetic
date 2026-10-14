@@ -1,0 +1,154 @@
+/* Source stylesheet. Build with `npm run build:css` -> assets/css/site.css (minified, committed).
+   Rules above @tailwind keep the cascade position they had when Font Awesome injected its CSS
+   ahead of the Tailwind Play CDN output. */
+
+/* Self-hosted fonts (SIL Open Font License 1.1, see assets/fonts/OFL-*.txt).
+   Same variable files and unicode ranges Google Fonts served for these families. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(../fonts/inter-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(../fonts/inter-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url(../fonts/outfit-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url(../fonts/outfit-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Header wordmark only: Google Fonts subsets holding just the letters of "ASKNETIC" and "GROUP". */
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/cinzel-700-wordmark.woff2) format('woff2');
+  unicode-range: U+41, U+43, U+45, U+49, U+4B, U+4E, U+53-54;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(../fonts/montserrat-800-wordmark.woff2) format('woff2');
+  unicode-range: U+47, U+4F-50, U+52, U+55;
+}
+
+/* Icons: inline SVG sprite built by scripts/build-icons.mjs. Same box model Font Awesome's
+   JavaScript gave its <svg class="svg-inline--fa">: 1em tall, width from the viewBox. */
+.icon {
+  display: inline-block;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -.125em;
+  box-sizing: content-box;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Visible keyboard focus on every interactive control (WCAG 2.4.7). The colour follows the
+   background (at least 3:1 against it): deep orange on light sections, light orange on dark ones,
+   white on the deep-orange panels.
+   !important so that older focus:outline-none utilities cannot hide it. */
+:root { --focus-ring: #B85A18; }
+.on-dark { --focus-ring: #F4A05C; }
+.on-light { --focus-ring: #B85A18; }
+.on-flame { --focus-ring: #fff; }
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 3px solid var(--focus-ring) !important;
+  outline-offset: 2px !important;
+}
+/* Floating buttons sit over any background: two-tone ring (white inside, ink outside). */
+.focus-halo:focus-visible {
+  outline: 3px solid #fff !important;
+  outline-offset: 0 !important;
+  box-shadow: 0 0 0 6px #181411 !important;
+}
+/* <main tabindex="-1"> only receives focus from the skip link; no ring around the whole page. */
+main[tabindex="-1"]:focus { outline: none; }
+/* The sticky header is 89 px tall: keep whatever keyboard focus (or an in-page link) scrolls to
+   below it, so a focused control is never hidden behind it, e.g. on Shift+Tab (WCAG 2.4.11). */
+html { scroll-padding-top: 6rem; }
+
+/* Header wordmark on every page: real text in place of the logo image, with the logo artwork's
+   proportions ("GROUP" about half the height and width of "ASKNETIC", gap about a third of its
+   letter height). The link keeps the image's 4rem box, so the header stays 89 px tall. "GROUP" in #FF914D is
+   6:1 against navysoft. Each line's padding-left matches its letter-spacing, which browsers also
+   add after the last letter, so both lines stay centred on each other. */
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+.wordmark-name {
+  font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: .04em;
+  padding-left: .04em;
+  color: #fff;
+}
+.wordmark-group {
+  margin-top: .2em;
+  font-family: 'Montserrat', 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: .8125rem;
+  letter-spacing: .65em;
+  padding-left: .65em;
+  color: #FF914D;
+}
+@media (min-width: 768px) {
+  .wordmark-name { font-size: 1.875rem; }
+  .wordmark-group { font-size: .9375rem; }
+}
+
+/* About Us hero overlay (navysoft #352D27). Lighter than the former flat 85%: a soft scrim stays about 86% dark
+   only behind the text block (sized in px, so it follows the text at every width) and fades to 40% at the top
+   and 30% at the bottom. The sunlit window and wall in ceo3 sit behind the heading, so the darker orange of
+   "Asknetic Group" (#E17A2E) needs that 86% to keep 3:1; flat 60-70% overlays left it at 1.8-2.2:1. */
+.about-hero-overlay {
+  background-image:
+    radial-gradient(ellipse 600px 240px at 50% 41%, rgb(53 45 39 / .77) 0%, rgb(53 45 39 / .72) 50%, rgb(53 45 39 / 0) 100%),
+    linear-gradient(to bottom, rgb(53 45 39 / .4) 0%, rgb(53 45 39 / .4) 60%, rgb(53 45 39 / .3) 100%);
+}
+
+/* No continuous or decorative motion for visitors who ask for reduced motion (WCAG 2.3.3). */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

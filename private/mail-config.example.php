@@ -29,4 +29,8 @@ return [
     // Optional: extra hostnames allowed to post the form, comma-separated (e.g. a staging domain).
     // The site's own host is always allowed. Leave empty unless needed.
     'ALLOWED_ORIGINS' => '',
+
+    // Optional: messages accepted per visitor IP address, and the period in seconds (default 5 per hour).
+    // 'RATE_LIMIT_MAX'    => 5,
+    // 'RATE_LIMIT_WINDOW' => 3600,
 ];

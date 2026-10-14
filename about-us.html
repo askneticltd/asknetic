@@ -4,42 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us — Asknetic Group</title>
-<meta name="description" content="Learn about Asknetic Enterprises Ltd — a leading corporate group headquartered in Dar es Salaam, Tanzania, driving excellence across ICT, real estate, agro crop, car hire, travel, and general supplies.">
+<meta name="description" content="Asknetic Enterprises Ltd, established in 2023, is a Dar es Salaam group of companies working in ICT, real estate, agro crop, building maintenance and more.">
 <link rel="canonical" href="https://www.askneticgroup.co.tz/about-us.html">
-<link rel="icon" type="image/png" href="images-icons/ask-logo-white.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          ink: '#181411',
-          inksoft: '#645A52',
-          paper: '#FFFFFF',
-          cream: '#FBF7F1',
-          flame: '#E17A2E',
-          flame2: '#F4A05C',
-          flamedeep: '#B85A18',
-          navy: '#211C18',
-          navysoft: '#352D27',
-        },
-        fontFamily: {
-          display: ['Outfit', 'sans-serif'],
-          sans: ['Inter', 'sans-serif'],
-        },
-        boxShadow: {
-          soft: '0 20px 50px -20px rgba(24,20,17,0.25)',
-          card: '0 10px 30px -10px rgba(24,20,17,0.12)',
-        }
-      }
-    }
-  }
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#352D27">
+<meta property="og:site_name" content="Asknetic Group">
+<meta property="og:title" content="About Us | Asknetic Group">
+<meta property="og:description" content="A group of companies in Dar es Salaam, Tanzania, established in 2023 and working across seven business sectors.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.askneticgroup.co.tz/about-us.html">
+<meta property="og:image" content="https://www.askneticgroup.co.tz/images-icons/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="People in a business meeting in a city office">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Us | Asknetic Group">
+<meta name="twitter:description" content="A group of companies in Dar es Salaam, Tanzania, established in 2023 and working across seven business sectors.">
+<meta name="twitter:image" content="https://www.askneticgroup.co.tz/images-icons/og-image.jpg">
+<meta name="twitter:image:alt" content="People in a business meeting in a city office">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="images-icons/favicon-32.png">
+<link rel="apple-touch-icon" href="images-icons/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/cinzel-700-wordmark.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/montserrat-800-wordmark.woff2" as="font" type="font/woff2" crossorigin>
 
 <style>
   html { scroll-behavior: smooth; }
@@ -61,12 +49,15 @@
     opacity: 0;
     transform: translateY(16px);
     pointer-events: none;
-    transition: opacity .3s ease, transform .3s ease, background-color .2s ease;
+    visibility: hidden;
+    transition: opacity .3s ease, transform .3s ease, background-color .2s ease, visibility 0s linear .3s;
   }
   #backToTop.show {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+    visibility: visible;
+    transition-delay: 0s;
   }
   #backToTop.show:hover {
     transform: translateY(-3px);
@@ -78,27 +69,47 @@
     .fade-up { opacity: 1; transform: none; }
   }
 
-  /* Core values tabs */
-  .val-tab[aria-selected="true"] { background:#211C18; color:#fff; border-color:#211C18; box-shadow:0 10px 30px -10px rgba(24,20,17,.35); }
-  .val-tab:focus-visible { outline:2px solid #E17A2E; outline-offset:2px; }
-
-  /* Clients marquee */
-  .client-chip { white-space:nowrap; padding:.9rem 1.5rem; border-radius:9999px; background:#FBF7F1; border:1px solid #f1e6d8; font-family:Outfit,sans-serif; font-weight:600; font-size:.875rem; color:#181411; }
-  .marquee { -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent); mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent); }
-  .marquee-track { display:flex; gap:1rem; width:max-content; animation:marquee 45s linear infinite; }
-  .marquee:hover .marquee-track { animation-play-state:paused; }
-  @keyframes marquee { to { transform:translateX(calc(-50% - .5rem)); } }
-  @media (prefers-reduced-motion: reduce){ .marquee-track { animation:none; } }
 </style>
+<noscript><style>.fade-up{opacity:1!important;transform:none!important}@media (max-width:1023.98px){#site-header{position:relative!important}#mobilemenu{display:block!important}#mobileSectorsMenu{display:flex!important}#navtoggle,#mobileSectorsBtn{display:none!important}}#navlinks li:hover>#sectorsMenu,#navlinks li:focus-within>#sectorsMenu{display:block!important}#sectorsBtn{display:none!important}</style></noscript>
+<link rel="stylesheet" href="assets/css/site.css?v=789aa2c0">
+<script src="assets/js/site.js?v=e97ace11" defer></script>
 </head>
 <body class="bg-cream text-ink font-sans antialiased overflow-x-hidden w-full">
+<!-- icons:start -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<!-- Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0) Copyright 2023 Fonticons, Inc. -->
+<symbol id="fa-brands-instagram" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></symbol>
+<symbol id="fa-brands-whatsapp" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></symbol>
+<symbol id="fa-regular-compass" viewBox="0 0 512 512"><path fill="currentColor" d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm306.7 69.1L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></symbol>
+<symbol id="fa-regular-eye" viewBox="0 0 576 512"><path fill="currentColor" d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z"/></symbol>
+<symbol id="fa-solid-arrow-up" viewBox="0 0 384 512"><path fill="currentColor" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></symbol>
+<symbol id="fa-solid-bars" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></symbol>
+<symbol id="fa-solid-chevron-down" viewBox="0 0 512 512"><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></symbol>
+<symbol id="fa-solid-clock" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></symbol>
+<symbol id="fa-solid-envelope" viewBox="0 0 512 512"><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></symbol>
+<symbol id="fa-solid-face-smile" viewBox="0 0 512 512"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM164.1 325.5C182 346.2 212.6 368 256 368s74-21.8 91.9-42.5c5.8-6.7 15.9-7.4 22.6-1.6s7.4 15.9 1.6 22.6C349.8 372.1 311.1 400 256 400s-93.8-27.9-116.1-53.5c-5.8-6.7-5.1-16.8 1.6-22.6s16.8-5.1 22.6 1.6zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></symbol>
+<symbol id="fa-solid-file-pdf" viewBox="0 0 512 512"><path fill="currentColor" d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 144-208 0c-35.3 0-64 28.7-64 64l0 144-48 0c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM176 352l32 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-16 0 0 32c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-48 0-80c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24l-16 0 0 48 16 0zm96-80l32 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-32 0c-8.8 0-16-7.2-16-16l0-128c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-16 0 0 96 16 0zm80-112c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 32 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-64 0-64z"/></symbol>
+<symbol id="fa-solid-gem" viewBox="0 0 512 512"><path fill="currentColor" d="M116.7 33.8c4.5-6.1 11.7-9.8 19.3-9.8H376c7.6 0 14.8 3.6 19.3 9.8l112 152c6.8 9.2 6.1 21.9-1.5 30.4l-232 256c-4.5 5-11 7.9-17.8 7.9s-13.2-2.9-17.8-7.9l-232-256c-7.7-8.5-8.3-21.2-1.5-30.4l112-152zm38.5 39.8c-3.3 2.5-4.2 7-2.1 10.5l57.4 95.6L63.3 192c-4.1 .3-7.3 3.8-7.3 8s3.2 7.6 7.3 8l192 16c.4 0 .9 0 1.3 0l192-16c4.1-.3 7.3-3.8 7.3-8s-3.2-7.6-7.3-8L301.5 179.8l57.4-95.6c2.1-3.5 1.2-8.1-2.1-10.5s-7.9-2-10.7 1L256 172.2 165.9 74.6c-2.8-3-7.4-3.4-10.7-1z"/></symbol>
+<symbol id="fa-solid-handshake" viewBox="0 0 640 512"><path fill="currentColor" d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L512 316.8V128h-.7l-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48V352h28.2l91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123zM16 128c-8.8 0-16 7.2-16 16V352c0 17.7 14.3 32 32 32H64c17.7 0 32-14.3 32-32V128H16zM48 320a16 16 0 1 1 0 32 16 16 0 1 1 0-32zM544 128V352c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32V144c0-8.8-7.2-16-16-16H544zm32 208a16 16 0 1 1 32 0 16 16 0 1 1 -32 0z"/></symbol>
+<symbol id="fa-solid-layer-group" viewBox="0 0 576 512"><path fill="currentColor" d="M264.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 149.8C37.4 145.8 32 137.3 32 128s5.4-17.9 13.9-21.8L264.5 5.2zM476.9 209.6l53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 277.8C37.4 273.8 32 265.3 32 256s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0l152-70.2zm-152 198.2l152-70.2 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 405.8C37.4 401.8 32 393.3 32 384s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0z"/></symbol>
+<symbol id="fa-solid-location-dot" viewBox="0 0 384 512"><path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></symbol>
+<symbol id="fa-solid-phone" viewBox="0 0 512 512"><path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></symbol>
+<symbol id="fa-solid-quote-left" viewBox="0 0 448 512"><path fill="currentColor" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></symbol>
+<symbol id="fa-solid-sack-dollar" viewBox="0 0 512 512"><path fill="currentColor" d="M320 96H192L144.6 24.9C137.5 14.2 145.1 0 157.9 0H354.1c12.8 0 20.4 14.2 13.3 24.9L320 96zM192 128H320c3.8 2.5 8.1 5.3 13 8.4C389.7 172.7 512 250.9 512 416c0 53-43 96-96 96H96c-53 0-96-43-96-96C0 250.9 122.3 172.7 179 136.4l0 0 0 0c4.8-3.1 9.2-5.9 13-8.4zm84 88c0-11-9-20-20-20s-20 9-20 20v14c-7.6 1.7-15.2 4.4-22.2 8.5c-13.9 8.3-25.9 22.8-25.8 43.9c.1 20.3 12 33.1 24.7 40.7c11 6.6 24.7 10.8 35.6 14l1.7 .5c12.6 3.8 21.8 6.8 28 10.7c5.1 3.2 5.8 5.4 5.9 8.2c.1 5-1.8 8-5.9 10.5c-5 3.1-12.9 5-21.4 4.7c-11.1-.4-21.5-3.9-35.1-8.5c-2.3-.8-4.7-1.6-7.2-2.4c-10.5-3.5-21.8 2.2-25.3 12.6s2.2 21.8 12.6 25.3c1.9 .6 4 1.3 6.1 2.1l0 0 0 0c8.3 2.9 17.9 6.2 28.2 8.4V424c0 11 9 20 20 20s20-9 20-20V410.2c8-1.7 16-4.5 23.2-9c14.3-8.9 25.1-24.1 24.8-45c-.3-20.3-11.7-33.4-24.6-41.6c-11.5-7.2-25.9-11.6-37.1-15l0 0-.7-.2c-12.8-3.9-21.9-6.7-28.3-10.5c-5.2-3.1-5.3-4.9-5.3-6.7c0-3.7 1.4-6.5 6.2-9.3c5.4-3.2 13.6-5.1 21.5-5c9.6 .1 20.2 2.2 31.2 5.2c10.7 2.8 21.6-3.5 24.5-14.2s-3.5-21.6-14.2-24.5c-6.5-1.7-13.7-3.4-21.1-4.7V216z"/></symbol>
+<symbol id="fa-solid-scale-balanced" viewBox="0 0 640 512"><path fill="currentColor" d="M384 32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H320 128c-17.7 0-32-14.3-32-32s14.3-32 32-32H288V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32H256c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32zm55.6 288H584.4L512 195.8 439.6 320zM512 416c-62.9 0-115.2-34-126-78.9c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C627.2 382 574.9 416 512 416zM126.8 195.8L54.4 320H199.3L126.8 195.8zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C242 382 189.7 416 126.8 416S11.7 382 .9 337.1z"/></symbol>
+<symbol id="fa-solid-truck-fast" viewBox="0 0 640 512"><path fill="currentColor" d="M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"/></symbol>
+<symbol id="fa-solid-xmark" viewBox="0 0 384 512"><path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></symbol>
+</svg>
+<!-- icons:end -->
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-full focus:bg-white focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-ink focus:shadow-lg">Skip to main content</a>
 
   <!-- HEADER -->
-<header id="site-header" class="sticky top-0 inset-x-0 z-50 w-full bg-navysoft border-b border-white/10 transition-shadow duration-300">
+<header id="site-header" class="on-dark sticky top-0 inset-x-0 z-50 w-full bg-navysoft border-b border-white/10 transition-shadow duration-300">
   <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-3 w-full">
   
-  <a href="index.html" class="flex items-center gap-2.5 shrink-0 focus:outline-none">
-    <img src="images-icons/ask-logo-blvk-256.webp" width="256" height="256" alt="Asknetic Group Logo" class="h-16 md:h-18 w-auto max-w-full object-contain scale-125 transition-transform duration-200 hover:scale-[1.3]">
+  <a href="index.html" class="wordmark shrink-0 focus:outline-none" aria-label="Asknetic Group home">
+    <span class="wordmark-name">ASKNETIC</span>
+    <span class="wordmark-group">GROUP</span>
   </a>
  
   <ul id="navlinks" class="hidden lg:flex items-center gap-8 list-none m-0 p-0">
@@ -109,23 +120,23 @@
       <a href="about-us.html" class="text-base font-semibold text-white hover:text-flame transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-flame" aria-current="page">About Us</a>
     </li>
     <li class="relative group">
-      <div class="flex items-center gap-1.5">
+      <div class="flex items-center">
         <a href="services.html" class="text-base font-semibold text-white hover:text-flame transition-colors py-1">Services</a>
-        <button id="sectorsBtn" type="button" aria-label="Show service list" aria-haspopup="true" aria-expanded="false" aria-controls="sectorsMenu" class="flex items-center py-1 text-white hover:text-flame transition-colors focus:outline-none">
-          <i id="sectorsArrow" class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
+        <button id="sectorsBtn" type="button" aria-label="Show service list" aria-haspopup="true" aria-expanded="false" aria-controls="sectorsMenu" class="flex items-center justify-center w-6 h-6 -mr-2 text-white hover:text-flame transition-colors focus:outline-none">
+          <svg class="icon text-[10px] transition-transform duration-200" id="sectorsArrow" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#fa-solid-chevron-down"></use></svg>
         </button>
       </div>
       
       <!-- Fixed Hover Gap with Padding Bridge -->
       <div id="sectorsMenu" class="hidden absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64 z-50">
         <div class="bg-navysoft border border-white/10 rounded-2xl p-2.5 flex flex-col gap-1 shadow-2xl">
-          <a href="services.html#ict" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">ICT Solutions</a>
-          <a href="services.html#real-estate" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Real Estate</a>
-          <a href="services.html#agro" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Agro Crops</a>
-          <a href="services.html#maintenance" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Building Maintenance</a>
-          <a href="services.html#car-hire" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Car Hire</a>
-          <a href="services.html#travel" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Travel & Visa Assistance</a>
-          <a href="services.html#supplies" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">General Supplies</a>
+          <a href="ict.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">ICT Solutions</a>
+          <a href="real-estate.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Real Estate</a>
+          <a href="agro.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Agro Crops</a>
+          <a href="maintenance.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Building Maintenance</a>
+          <a href="car-hire.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Car Hire</a>
+          <a href="travel.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">Travel & Visa Assistance</a>
+          <a href="supplies.html" class="px-3 py-2 rounded-xl text-xs font-medium text-white hover:bg-white/10 hover:text-flame transition-all">General Supplies</a>
         <div class="my-1 border-t border-white/10"></div>
         <a href="services.html" class="px-3 py-2 rounded-xl text-xs font-semibold text-flame hover:bg-black hover:text-white transition-all hover:scale-105">
           <span>View All Services</span>
@@ -138,12 +149,12 @@
     </li>
   </ul>
  
-  <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 bg-flame hover:bg-black text-white px-6 py-2.5 rounded-full text-base font-semibold transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 shrink-0 focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
+  <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 bg-flamedeep hover:bg-black text-white px-6 py-2.5 rounded-full text-base font-semibold transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 shrink-0 focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
     <span>Get in Touch</span>
   </a>
    
-    <button id="navtoggle" type="button" class="lg:hidden w-10 h-10 rounded-full hover:bg-black hover:text-white flex items-center justify-center text-flame transition-all hover:scale-105 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobilemenu">
-      <i class="fa-solid fa-bars shadow-lg shadow-flame" id="navtoggle-icon"></i>
+    <button id="navtoggle" type="button" class="group lg:hidden w-10 h-10 rounded-full hover:bg-black hover:text-white flex items-center justify-center text-flame transition-all hover:scale-105 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobilemenu">
+      <svg class="icon shadow-lg shadow-flame group-aria-expanded:hidden" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#fa-solid-bars"></use></svg><svg class="icon hidden shadow-lg shadow-flame group-aria-expanded:inline-block" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><use href="#fa-solid-xmark"></use></svg>
     </button>
 </nav>
  
@@ -155,45 +166,46 @@
     <div class="flex items-center justify-between w-full">
       <a href="services.html" class="text-base font-semibold text-white hover:text-flame transition-colors">Services</a>
       <button id="mobileSectorsBtn" type="button" aria-label="Show service list" aria-expanded="false" aria-controls="mobileSectorsMenu" class="w-8 h-8 -mr-2 flex items-center justify-center text-white hover:text-flame transition-colors focus:outline-none">
-        <i id="mobileSectorsArrow" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+        <svg class="icon text-xs transition-transform duration-200" id="mobileSectorsArrow" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#fa-solid-chevron-down"></use></svg>
       </button>
     </div>
     
     <div id="mobileSectorsMenu" class="hidden pl-4 pt-4 flex flex-col gap-3 text-sm">
-      <a href="services.html#ict" class="text-white/80 hover:text-flame transition-colors">ICT Solutions</a>
-      <a href="services.html#real-estate" class="text-white/80 hover:text-flame transition-colors">Real Estate</a>
-      <a href="services.html#agro" class="text-white/80 hover:text-flame transition-colors">Agro Crops</a>
-      <a href="services.html#maintenance" class="text-white/80 hover:text-flame transition-colors">Building Maintenance</a>
-      <a href="services.html#car-hire" class="text-white/80 hover:text-flame transition-colors">Car Hire</a>
-      <a href="services.html#travel" class="text-white/80 hover:text-flame transition-colors">Travel & Visa Assistance</a>
-      <a href="services.html#supplies" class="text-white/80 hover:text-flame transition-colors">General Supplies</a>
+      <a href="ict.html" class="text-white/80 hover:text-flame transition-colors">ICT Solutions</a>
+      <a href="real-estate.html" class="text-white/80 hover:text-flame transition-colors">Real Estate</a>
+      <a href="agro.html" class="text-white/80 hover:text-flame transition-colors">Agro Crops</a>
+      <a href="maintenance.html" class="text-white/80 hover:text-flame transition-colors">Building Maintenance</a>
+      <a href="car-hire.html" class="text-white/80 hover:text-flame transition-colors">Car Hire</a>
+      <a href="travel.html" class="text-white/80 hover:text-flame transition-colors">Travel & Visa Assistance</a>
+      <a href="supplies.html" class="text-white/80 hover:text-flame transition-colors">General Supplies</a>
     </div>
   </div>
  
   <a href="contact.html" class="block py-3 border-b border-white/10 text-base font-semibold text-white hover:text-flame transition-colors">Contact Us</a>
   
   <div class="pt-5 pb-2">
-    <a href="contact.html" class="flex items-center justify-center w-full bg-flame text-white py-3 rounded-full text-base font-semibold hover:bg-black transition-all hover:scale-105 shadow-2xl shadow-amber-400">
+    <a href="contact.html" class="flex items-center justify-center w-full bg-flamedeep text-white py-3 rounded-full text-base font-semibold hover:bg-black transition-all hover:scale-105 shadow-2xl shadow-amber-400">
       Get in Touch
     </a>
   </div>
 </div>
 </header>
 
-<main id="top">
+<main id="main" tabindex="-1">
 
   <!-- HERO -->
-  <section class="relative bg-navy overflow-hidden pt-14 pb-32 md:pt-20 md:pb-40">
-    <img src="images-icons/hero2-1080.webp" srcset="images-icons/hero2-640.webp 640w, images-icons/hero2-1080.webp 1080w" sizes="100vw" width="1080" height="810" alt="" aria-hidden="true" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover opacity-90">
+  <section class="on-dark relative bg-navy overflow-hidden pt-14 pb-32 md:pt-20 md:pb-40">
+    <img src="images-icons/ceo3-1280.webp" srcset="images-icons/ceo3-960.webp 960w, images-icons/ceo3-1280.webp 1280w, images-icons/ceo3-1440.webp 1440w, images-icons/ceo3-1672.webp 1672w" sizes="(min-width: 768px) 100vw, (min-width: 416px) 660px, 790px" width="1672" height="941" alt="" aria-hidden="true" loading="eager" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover opacity-90">
     <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-flame/30 blur-3xl"></div>
     <div class="absolute -bottom-32 -right-16 w-[28rem] h-[28rem] rounded-full bg-flame2/20 blur-3xl"></div>
-    <div class="absolute inset-0 bg-navysoft/65"></div>
+    <!-- Gradient overlay, darker only behind the text: see .about-hero-overlay in src/site.css -->
+    <div class="about-hero-overlay absolute inset-0"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 text-center">
-      <nav aria-label="Breadcrumb" class="text-xs text-white/60 mb-6">
+      <nav aria-label="Breadcrumb" class="text-xs text-white/90 mb-6">
         <a href="index.html" class="hover:text-flame2 transition-colors">Home</a>
         <span class="mx-2">/</span>
-        <span class="text-flame2">About Us</span>
+        <span class="text-white font-semibold" aria-current="page">About Us</span>
       </nav>
       <h1 class="font-display font-bold text-4xl sm:text-5xl md:text-7xl text-white leading-tight mb-6">
         About <span class="bg-gradient-to-r from-flame2 to-flame bg-clip-text text-transparent">Asknetic Group</span>
@@ -208,15 +220,15 @@
   <div class="relative z-20 -mt-16 md:-mt-20 max-w-5xl mx-auto px-6">
     <div class="bg-white rounded-3xl shadow-soft border border-slate-100 grid grid-cols-3 divide-x divide-slate-100">
       <div class="p-5 md:p-8 text-center">
-        <div class="font-display font-bold text-3xl md:text-5xl text-flame" data-count="2023" data-plain>0</div>
+        <div class="font-display font-bold text-3xl md:text-5xl text-flamedeep" data-count="2023" data-plain>2023</div>
         <div class="text-[11px] md:text-sm text-inksoft mt-1">Year Established</div>
       </div>
       <div class="p-5 md:p-8 text-center">
-        <div class="font-display font-bold text-3xl md:text-5xl text-flame"><span data-count="7">0</span>+</div>
+        <div class="font-display font-bold text-3xl md:text-5xl text-flamedeep"><span data-count="7">7</span>+</div>
         <div class="text-[11px] md:text-sm text-inksoft mt-1">Core Business Sectors</div>
       </div>
       <div class="p-5 md:p-8 text-center">
-        <div class="font-display font-bold text-3xl md:text-5xl text-flame"><span data-count="24">0</span>h</div>
+        <div class="font-display font-bold text-3xl md:text-5xl text-flamedeep"><span data-count="24">24</span>h</div>
         <div class="text-[11px] md:text-sm text-inksoft mt-1">Consignment Tracking</div>
       </div>
     </div>
@@ -228,7 +240,7 @@
 
     <!-- Content Column -->
     <div class="fade-up">
-      <span class="text-xs font-bold tracking-widest uppercase text-flamedeep bg-orange-100 px-4 py-1.5 rounded-full inline-block mb-5">Who We Are</span>
+      <span class="text-xs font-bold tracking-widest uppercase text-flameink bg-orange-100 px-4 py-1.5 rounded-full inline-block mb-5">Who We Are</span>
       <h2 class="font-display font-bold text-3xl md:text-5xl text-ink leading-tight mb-6">Built to secure opportunity across Tanzania.</h2>
       
       <div class="space-y-4 text-inksoft leading-relaxed mb-8">
@@ -238,9 +250,9 @@
       </div>
 
       <!-- Action Button (Placed cleanly under the paragraph text) -->
-      <a href="Asknetic-Company-Profile.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-flame hover:bg-black text-white px-6 py-3.5 rounded-full text-sm font-semibold transition-all hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
-        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
-        <span>Download Company Profile</span>
+      <a href="Asknetic-Company-Profile-web.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-flamedeep hover:bg-black text-white px-6 py-3.5 rounded-full text-sm font-semibold transition-all hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-flame focus:ring-offset-2">
+        <svg class="icon" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#fa-solid-file-pdf"></use></svg>
+        <span>Download Company Profile <span class="font-normal">(PDF, 1.9&nbsp;MB)</span></span>
       </a>
     </div>
 
@@ -251,7 +263,7 @@
       
       <!-- Main Image Container -->
       <div class="relative rounded-[2rem] overflow-hidden shadow-soft">
-        <img src="images-icons/officeman-1000.webp" srcset="images-icons/officeman-600.webp 600w, images-icons/officeman-1000.webp 1000w, images-icons/officeman-1500.webp 1500w" sizes="(min-width: 1280px) 504px, (min-width: 1024px) 45vw, 100vw" width="1500" height="1875" decoding="async" alt="Asknetic Group corporate office" class="w-full h-full object-cover aspect-[4/5]" loading="lazy" onerror="this.closest('.relative').style.display='none'">
+        <img src="images-icons/officeman-1000.webp" srcset="images-icons/officeman-600.webp 600w, images-icons/officeman-1000.webp 1000w, images-icons/officeman-1500.webp 1500w" sizes="(min-width: 1280px) 504px, (min-width: 1024px) 45vw, 100vw" width="1500" height="1875" decoding="async" alt="A man working on a laptop in an office while colleagues talk behind him" class="w-full h-full object-cover aspect-[4/5]" loading="lazy" onerror="this.closest('.relative').style.display='none'">
       </div>
 
       <!-- Floating Badge -->
@@ -270,7 +282,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
       
       <div class="reveal lg:col-span-5 flex flex-col items-start">
-        <span class="inline-block bg-orange-100/80 text-orange-600 font-semibold text-xs px-4 py-1.5 rounded-full mb-4">
+        <span class="inline-block bg-orange-100/80 text-flameink font-semibold text-xs px-4 py-1.5 rounded-full mb-4">
           Our Purpose
         </span>
         <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-900 leading-tight">
@@ -286,7 +298,7 @@
         <div class="reveal group bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-orange-300 hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer">
           <div class="flex flex-col items-start gap-3 mb-2">
             <div class="w-10 h-10 rounded-2xl bg-orange-100/70 group-hover:bg-orange-500 text-orange-500 group-hover:text-white flex items-center justify-center text-base flex-shrink-0 transition-all duration-300 group-hover:scale-110">
-              <i class="fa-regular fa-compass"></i>
+              <svg class="icon" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#fa-regular-compass"></use></svg>
             </div>
             <h3 class="font-display font-bold text-lg text-slate-900 group-hover:text-orange-500 transition-colors duration-300">
               Our Vision
@@ -300,7 +312,7 @@
         <div class="reveal group bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-orange-300 hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer">
           <div class="flex flex-col items-start gap-3 mb-2">
             <div class="w-10 h-10 rounded-2xl bg-orange-100/70 group-hover:bg-orange-500 text-orange-500 group-hover:text-white flex items-center justify-center text-base flex-shrink-0 transition-all duration-300 group-hover:scale-110">
-              <i class="fa-regular fa-eye"></i>
+              <svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#fa-regular-eye"></use></svg>
             </div>
             <h3 class="font-display font-bold text-lg text-slate-900 group-hover:text-orange-500 transition-colors duration-300">
               Our Mission
@@ -323,7 +335,7 @@
     
     <!-- Section Header -->
     <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
-      <span class="text-xs font-bold tracking-widest uppercase text-flamedeep bg-orange-100 px-4 py-1.5 rounded-full inline-block mb-4">Our Journey</span>
+      <span class="text-xs font-bold tracking-widest uppercase text-flameink bg-orange-100 px-4 py-1.5 rounded-full inline-block mb-4">Our Journey</span>
       <h2 class="font-display font-bold text-3xl md:text-5xl text-ink leading-tight mb-4">The Asknetic Story</h2>
       <p class="text-inksoft text-base md:text-lg leading-relaxed">From our founding in 2023 to today, follow our journey of growth, expansion, and operational excellence across Tanzania.</p>
     </div>
@@ -341,7 +353,7 @@
           <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-flame rounded-full border-4 border-cream -translate-x-1/2 shadow-sm z-10" aria-hidden="true"></div>
           <div class="ml-12 md:ml-0 md:w-[calc(50%-2rem)] md:mr-auto md:pr-4 transition-transform duration-300 hover:-translate-y-1">
             <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-100 shadow-card">
-              <span class="inline-block px-3 py-1 bg-orange-100 text-flamedeep text-xs font-bold rounded-full mb-3">2023</span>
+              <span class="inline-block px-3 py-1 bg-orange-100 text-flameink text-xs font-bold rounded-full mb-3">2023</span>
               <h3 class="font-display font-bold text-xl text-ink mb-2">Company Founded</h3>
               <p class="text-inksoft text-sm leading-relaxed">Asknetic Enterprises Ltd was established in Dar es Salaam, Tanzania with a vision to provide premium, dependable business solutions.</p>
             </div>
@@ -353,7 +365,7 @@
           <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-flame rounded-full border-4 border-cream -translate-x-1/2 shadow-sm z-10" aria-hidden="true"></div>
           <div class="ml-12 md:ml-0 md:w-[calc(50%-2rem)] md:ml-auto md:pl-4 transition-transform duration-300 hover:-translate-y-1">
             <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-100 shadow-card">
-              <span class="inline-block px-3 py-1 bg-orange-100 text-flamedeep text-xs font-bold rounded-full mb-3">2023</span>
+              <span class="inline-block px-3 py-1 bg-orange-100 text-flameink text-xs font-bold rounded-full mb-3">2023</span>
               <h3 class="font-display font-bold text-xl text-ink mb-2">Service Expansion</h3>
               <p class="text-inksoft text-sm leading-relaxed">Launched multiple service divisions including ICT Solutions, Building Maintenance, and Agro Crop export operations.</p>
             </div>
@@ -365,7 +377,7 @@
           <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-flame rounded-full border-4 border-cream -translate-x-1/2 shadow-sm z-10" aria-hidden="true"></div>
           <div class="ml-12 md:ml-0 md:w-[calc(50%-2rem)] md:mr-auto md:pr-4 transition-transform duration-300 hover:-translate-y-1">
             <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-100 shadow-card">
-              <span class="inline-block px-3 py-1 bg-orange-100 text-flamedeep text-xs font-bold rounded-full mb-3">2024</span>
+              <span class="inline-block px-3 py-1 bg-orange-100 text-flameink text-xs font-bold rounded-full mb-3">2024</span>
               <h3 class="font-display font-bold text-xl text-ink mb-2">Growing Clientele</h3>
               <p class="text-inksoft text-sm leading-relaxed">Expanded our client base to over 50 satisfied corporate, institutional, and private customers across various industries in Tanzania.</p>
             </div>
@@ -377,7 +389,7 @@
           <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-flame rounded-full border-4 border-cream -translate-x-1/2 shadow-sm z-10" aria-hidden="true"></div>
           <div class="ml-12 md:ml-0 md:w-[calc(50%-2rem)] md:ml-auto md:pl-4 transition-transform duration-300 hover:-translate-y-1">
             <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-100 shadow-card">
-              <span class="inline-block px-3 py-1 bg-orange-100 text-flamedeep text-xs font-bold rounded-full mb-3">2025</span>
+              <span class="inline-block px-3 py-1 bg-orange-100 text-flameink text-xs font-bold rounded-full mb-3">2025</span>
               <h3 class="font-display font-bold text-xl text-ink mb-2">Zanzibar Operations</h3>
               <p class="text-inksoft text-sm leading-relaxed">Extended our car hire and travel agency services to cover Zanzibar, seamlessly serving both mainland and island clients.</p>
             </div>
@@ -389,7 +401,7 @@
           <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-flame rounded-full border-4 border-cream -translate-x-1/2 shadow-sm z-10" aria-hidden="true"></div>
           <div class="ml-12 md:ml-0 md:w-[calc(50%-2rem)] md:mr-auto md:pr-4 transition-transform duration-300 hover:-translate-y-1">
             <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-100 shadow-card">
-              <span class="inline-block px-3 py-1 bg-orange-100 text-flamedeep text-xs font-bold rounded-full mb-3">2026</span>
+              <span class="inline-block px-3 py-1 bg-orange-100 text-flameink text-xs font-bold rounded-full mb-3">2026</span>
               <h3 class="font-display font-bold text-xl text-ink mb-2">Continued Growth</h3>
               <p class="text-inksoft text-sm leading-relaxed">Celebrating steady growth with 100+ clients and establishing a strong reputation for reliability across all seven core business sectors.</p>
             </div>
@@ -408,7 +420,7 @@
     
     <!-- Section Header -->
     <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16 fade-up">
-      <span class="text-xs font-bold tracking-widest uppercase text-flamedeep bg-orange-100 px-4 py-1.5 rounded-full inline-block mb-4">Core Principles</span>
+      <span class="text-xs font-bold tracking-widest uppercase text-flameink bg-orange-100 px-4 py-1.5 rounded-full inline-block mb-4">Core Principles</span>
       <h2 class="font-display font-bold text-3xl md:text-5xl text-ink leading-tight mb-4">Driven by Strong Values</h2>
       <p class="text-inksoft text-base md:text-lg leading-relaxed">Our core principles guide every interaction, contract, and service across all Asknetic group operations.</p>
     </div>
@@ -422,9 +434,9 @@
         <div class="relative w-full max-w-[480px] sm:max-w-[540px] aspect-square flex items-center justify-center">
           
           <!-- Center Node -->
-          <div class="absolute z-20 w-32 sm:w-40 aspect-[1/1.15] bg-gradient-to-br from-flame to-flamedeep text-white shadow-xl shadow-orange-500/20 flex flex-col items-center justify-center p-4 transition-transform duration-300 hover:scale-105 [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]">
+          <div class="absolute z-20 w-32 sm:w-40 aspect-[1/1.15] bg-gradient-to-br from-flamedeep to-[#8A4312] text-white shadow-xl shadow-orange-500/20 flex flex-col items-center justify-center p-4 transition-transform duration-300 hover:scale-105 [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]">
             <div class="text-3xl sm:text-4xl mb-1">
-              <i class="fa-solid fa-layer-group"></i>
+              <svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#fa-solid-layer-group"></use></svg>
             </div>
             <span class="font-display font-bold text-sm sm:text-base tracking-wider uppercase">VALUES</span>
           </div>
@@ -432,66 +444,66 @@
           <!-- Node 1: Reliability -->
           <div class="absolute -translate-x-20 -translate-y-28 sm:-translate-x-28 sm:-translate-y-36 z-10 group">
             <button type="button" 
-                    class="value-node active w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]"
+                    class="value-node active w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame focus-visible:bg-flamedeep transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]"
                     data-title="Reliability"
                     data-desc="We deliver on our promises consistently, ensuring all projects and services strictly adhere to agreed quality standards, deadlines, and operational guidelines.">
-              <i class="fa-solid fa-truck-fast text-flame group-hover:text-white text-xl sm:text-2xl mb-1 transition-colors"></i>
-              <h3 class="font-bold text-slate-800 group-hover:text-white text-xs sm:text-sm leading-tight transition-colors">Reliability</h3>
+              <svg class="icon text-flame group-hover:text-white group-focus-within:text-white text-xl sm:text-2xl mb-1 transition-colors" viewBox="0 0 640 512" aria-hidden="true" focusable="false"><use href="#fa-solid-truck-fast"></use></svg>
+              <span class="font-bold text-slate-800 group-hover:text-white group-focus-within:text-white text-xs sm:text-sm leading-tight transition-colors">Reliability</span>
             </button>
           </div>
 
           <!-- Node 2: Trust -->
           <div class="absolute translate-x-20 -translate-y-28 sm:translate-x-28 sm:-translate-y-36 z-10 group">
             <button type="button" 
-                    class="value-node w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]"
+                    class="value-node w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame focus-visible:bg-flamedeep transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]"
                     data-title="Trust"
                     data-desc="Building transparent, honest, and long-lasting relationships with our clients, partners, and stakeholders across all business units.">
-              <i class="fa-solid fa-handshake text-flame group-hover:text-white text-xl sm:text-2xl mb-1 transition-colors"></i>
-              <h3 class="font-bold text-slate-800 group-hover:text-white text-xs sm:text-sm leading-tight transition-colors">Trust</h3>
+              <svg class="icon text-flame group-hover:text-white group-focus-within:text-white text-xl sm:text-2xl mb-1 transition-colors" viewBox="0 0 640 512" aria-hidden="true" focusable="false"><use href="#fa-solid-handshake"></use></svg>
+              <span class="font-bold text-slate-800 group-hover:text-white group-focus-within:text-white text-xs sm:text-sm leading-tight transition-colors">Trust</span>
             </button>
           </div>
 
           <!-- Node 3: Availability -->
           <div class="absolute translate-x-32 sm:translate-x-44 z-10 group">
             <button type="button" 
-                    class="value-node w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]"
+                    class="value-node w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame focus-visible:bg-flamedeep transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]"
                     data-title="Availability"
                     data-desc="Round-the-clock support and responsive client care ensure solutions are provided rapidly whenever emergencies or demands arise.">
-              <i class="fa-solid fa-clock text-flame group-hover:text-white text-xl sm:text-2xl mb-1 transition-colors"></i>
-              <h3 class="font-bold text-slate-800 group-hover:text-white text-xs sm:text-sm leading-tight transition-colors">Availability</h3>
+              <svg class="icon text-flame group-hover:text-white group-focus-within:text-white text-xl sm:text-2xl mb-1 transition-colors" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#fa-solid-clock"></use></svg>
+              <span class="font-bold text-slate-800 group-hover:text-white group-focus-within:text-white text-xs sm:text-sm leading-tight transition-colors">Availability</span>
             </button>
           </div>
 
           <!-- Node 4: Customer Satisfaction -->
           <div class="absolute translate-x-20 translate-y-28 sm:translate-x-28 sm:translate-y-36 z-10 group">
             <button type="button" 
-                    class="value-node w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]"
+                    class="value-node w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame focus-visible:bg-flamedeep transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]"
                     data-title="Customer Satisfaction"
                     data-desc="We prioritize personalized client needs, driving maximum value and exceptional operational results across mainland Tanzania and Zanzibar.">
-              <i class="fa-solid fa-face-smile text-flame group-hover:text-white text-xl sm:text-2xl mb-1 transition-colors"></i>
-              <h3 class="font-bold text-slate-800 group-hover:text-white text-xs sm:text-sm leading-tight transition-colors">Customer<br>Satisfaction</h3>
+              <svg class="icon text-flame group-hover:text-white group-focus-within:text-white text-xl sm:text-2xl mb-1 transition-colors" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#fa-solid-face-smile"></use></svg>
+              <span class="font-bold text-slate-800 group-hover:text-white group-focus-within:text-white text-xs sm:text-sm leading-tight transition-colors">Customer<br>Satisfaction</span>
             </button>
           </div>
 
           <!-- Node 5: Cost Effectiveness -->
           <div class="absolute -translate-x-20 translate-y-28 sm:-translate-x-28 sm:translate-y-36 z-10 group">
             <button type="button" 
-                    class="value-node w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]"
+                    class="value-node w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame focus-visible:bg-flamedeep transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]"
                     data-title="Cost Effectiveness"
                     data-desc="Providing high-tier, professional enterprise services at competitive pricing models without sacrificing performance or safety.">
-              <i class="fa-solid fa-sack-dollar text-flame group-hover:text-white text-xl sm:text-2xl mb-1 transition-colors"></i>
-              <h3 class="font-bold text-slate-800 group-hover:text-white text-xs sm:text-sm leading-tight transition-colors">Cost<br>Effectiveness</h3>
+              <svg class="icon text-flame group-hover:text-white group-focus-within:text-white text-xl sm:text-2xl mb-1 transition-colors" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#fa-solid-sack-dollar"></use></svg>
+              <span class="font-bold text-slate-800 group-hover:text-white group-focus-within:text-white text-xs sm:text-sm leading-tight transition-colors">Cost<br>Effectiveness</span>
             </button>
           </div>
 
           <!-- Node 6: Responsibility -->
           <div class="absolute -translate-x-32 sm:-translate-x-44 z-10 group">
             <button type="button" 
-                    class="value-node w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]"
+                    class="value-node w-28 sm:w-36 aspect-[1/1.15] bg-white border border-slate-100 shadow-md group-hover:shadow-xl group-hover:bg-flame focus-visible:bg-flamedeep transition-all duration-300 flex flex-col items-center justify-center p-3 text-center cursor-pointer [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]"
                     data-title="Responsibility"
                     data-desc="Upholding high ethical standards, environmental mindfulness, and full accountability in every endeavor we undertake.">
-              <i class="fa-solid fa-scale-balanced text-flame group-hover:text-white text-xl sm:text-2xl mb-1 transition-colors"></i>
-              <h3 class="font-bold text-slate-800 group-hover:text-white text-xs sm:text-sm leading-tight transition-colors">Responsibility</h3>
+              <svg class="icon text-flame group-hover:text-white group-focus-within:text-white text-xl sm:text-2xl mb-1 transition-colors" viewBox="0 0 640 512" aria-hidden="true" focusable="false"><use href="#fa-solid-scale-balanced"></use></svg>
+              <span class="font-bold text-slate-800 group-hover:text-white group-focus-within:text-white text-xs sm:text-sm leading-tight transition-colors">Responsibility</span>
             </button>
           </div>
 
@@ -502,12 +514,12 @@
       <div class="lg:col-span-5 fade-up">
         <div class="bg-cream p-8 md:p-10 rounded-3xl border border-slate-200/80 shadow-card">
           <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-orange-100 text-flame mb-6">
-            <i class="fa-solid fa-gem text-xl"></i>
+            <svg class="icon text-xl" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#fa-solid-gem"></use></svg>
           </div>
           <h3 id="value-display-title" class="font-display font-bold text-2xl text-ink mb-4 transition-all duration-200">
             Reliability
           </h3>
-          <p id="value-display-desc" class="text-inksoft text-base leading-relaxed transition-all duration-200">
+          <p id="value-display-desc" aria-live="polite" class="text-inksoft text-base leading-relaxed transition-all duration-200">
             We deliver on our promises consistently, ensuring all projects and services strictly adhere to agreed quality standards, deadlines, and operational guidelines.
           </p>
         </div>
@@ -521,37 +533,37 @@
   <section class="py-20 md:py-28 bg-white">
     <div class="max-w-5xl mx-auto px-6 md:px-10">
       <div class="relative bg-cream rounded-[2rem] border border-orange-100 p-8 md:p-14 fade-up">
-        <div class="absolute -top-7 left-8 md:left-14 w-14 h-14 rounded-2xl bg-flame text-white flex items-center justify-center text-2xl shadow-lg"><i class="fa-solid fa-quote-left"></i></div>
-        <span class="text-xs font-bold tracking-widest uppercase text-flamedeep block mb-3 mt-4">Word from the Managing Director</span>
+        <div class="absolute -top-7 left-8 md:left-14 w-14 h-14 rounded-2xl bg-flame text-white flex items-center justify-center text-2xl shadow-lg"><svg class="icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#fa-solid-quote-left"></use></svg></div>
+        <span class="text-xs font-bold tracking-widest uppercase text-flameink block mb-3 mt-4">Word from the Managing Director</span>
         <blockquote class="font-display text-xl md:text-2xl text-ink leading-relaxed">
           With our vision, we will always strive harder in ensuring specialized solutions so as to be a market leader and an epitome company. Having established a worldwide network in terms of partnerships, we have ensured improved quality and variety of service which is in line with our core values and a desired course in achieving our mission.
         </blockquote>
         <p class="text-inksoft leading-relaxed mt-5">With our focus, we only expect exceptional service from our personnel to our esteemed clients. We also embrace innovation and technology so as to stay abreast in the industry.</p>
-        <p class="mt-6 pt-5 border-t border-orange-200 text-sm font-semibold text-ink">Managing Director <span class="text-flamedeep">· Asknetic Enterprises Ltd</span></p>
+        <p class="mt-6 pt-5 border-t border-orange-200 text-sm font-semibold text-ink">Managing Director <span class="text-flameink">· Asknetic Enterprises Ltd</span></p>
       </div>
     </div>
   </section>
 
-  <!-- MEET OUR TEAM (Newly Added Complete Section) -->
-  <section class="py-24 bg-secondary/30">
+  <!-- LEADERSHIP -->
+  <section class="py-24 bg-cream">
 <div class="container mx-auto px-4 lg:px-8">
-<div class="text-center mb-14" class="reveal reveal--up">
-<p class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">Our Leadership</p>
+<div class="text-center mb-14">
+<p class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-flameink text-sm font-medium mb-4">Our Leadership</p>
 <h2 class="text-3xl md:text-4xl font-bold mb-4">Executive Leadership</h2>
-<p class="text-lg text-muted-foreground max-w-2xl mx-auto">Guided by experienced leadership committed to excellence across Tanzania and East Africa.</p>
+<p class="text-lg text-inksoft max-w-2xl mx-auto">Guided by experienced leadership committed to excellence across Tanzania and East Africa.</p>
 </div>
-<div class="reveal reveal--up">
-<article class="mx-auto max-w-4xl overflow-hidden rounded-3xl border border-border bg-card shadow-xl">
+<div>
+<article class="mx-auto max-w-4xl overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl">
 <div class="grid md:grid-cols-2 gap-0">
 <div class="relative aspect-[4/5] sm:aspect-[3/4] md:aspect-auto md:min-h-[480px]">
 <img src="images-icons/ceo-portrait-1086.webp" srcset="images-icons/ceo-portrait-600.webp 600w, images-icons/ceo-portrait-1086.webp 1086w" sizes="(min-width: 768px) 448px, 100vw" width="1086" height="1448" alt="Kenan Richard, Chief Executive Officer of Asknetic Group" class="absolute inset-0 w-full h-full object-cover object-top" loading="lazy" decoding="async">
 </div>
 <div class="flex flex-col justify-center p-8 md:p-12 lg:p-14">
-<p class="text-sm font-semibold uppercase tracking-wider text-primary mb-2">Chief Executive Officer (CEO)</p>
+<p class="text-sm font-semibold uppercase tracking-wider text-flameink mb-2">Chief Executive Officer (CEO)</p>
 <h3 class="text-3xl md:text-4xl font-bold mb-4">Kenan Richard</h3>
-<div class="h-1 w-16 bg-primary rounded-full mb-6" aria-hidden="true"></div>
-<p class="text-muted-foreground leading-relaxed text-lg mb-6">Kenan Richard leads Asknetic Enterprises Ltd with a vision to deliver premium, diversified business solutions across Tanzania. Under his leadership, the company has grown into a trusted partner for government institutions, corporates, and enterprises seeking reliability, integrity, and world-class service.</p>
-<p class="text-muted-foreground leading-relaxed">With deep roots in the East African business landscape, Kenan champions customer satisfaction, operational excellence, and sustainable growth positioning Asknetic Group as a premier corporate services provider in the region.</p>
+<div class="h-1 w-16 bg-flame rounded-full mb-6" aria-hidden="true"></div>
+<p class="text-inksoft leading-relaxed text-lg mb-6">Kenan Richard leads Asknetic Enterprises Ltd with a vision to deliver premium, diversified business solutions across Tanzania. Under his leadership, the company has grown into a trusted partner for government institutions, corporates, and enterprises seeking reliability, integrity, and world-class service.</p>
+<p class="text-inksoft leading-relaxed">With deep roots in the East African business landscape, Kenan champions customer satisfaction, operational excellence, and sustainable growth positioning Asknetic Group as a premier corporate services provider in the region.</p>
 </div>
 </div>
 </article>
@@ -566,7 +578,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
 
       <div class="reveal lg:col-span-5 text-center lg:text-left">
-        <span class="text-xs font-bold tracking-widest uppercase text-flamedeep bg-orange-100/80 px-4 py-1.5 rounded-full inline-block mb-4">
+        <span class="text-xs font-bold tracking-widest uppercase text-flameink bg-orange-100/80 px-4 py-1.5 rounded-full inline-block mb-4">
           OUR TRUSTED CLIENTS
         </span>
         <h2 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-slate-900 leading-tight mb-6">
@@ -584,47 +596,47 @@
         <div class="relative w-full max-w-[560px] aspect-square mx-auto">
 
           <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-full shadow-xl shadow-slate-200/80 border border-slate-100 flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110 z-30 group">
-            <img src="images-icons/trc-logo2-256.webp" loading="lazy" decoding="async" alt="TRC Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+            <img src="images-icons/trc-logo2-256.webp" width="256" height="256" loading="lazy" decoding="async" alt="Tanzania Railways Corporation (TRC) logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
           </div>
 
           <div class="absolute top-[12%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 sm:w-32 sm:h-32 bg-white rounded-full shadow-lg shadow-slate-200/60 border border-slate-100 flex items-center justify-center p-4 transition-transform duration-300 hover:scale-110 hover:shadow-xl z-20 group">
-            <img src="images-icons/tanesco-256.webp" loading="lazy" decoding="async" alt="TANESCO Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+            <img src="images-icons/tanesco-256.webp" width="256" height="131" loading="lazy" decoding="async" alt="TANESCO logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
           </div>
 
           <div class="absolute top-[19.3%] left-[72.3%] -translate-x-1/2 -translate-y-1/2 w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full shadow-md shadow-slate-200/50 border border-slate-100 flex items-center justify-center p-3 transition-transform duration-300 hover:scale-110 z-10 group">
-            <img src="images-icons/judiciary-logo-256.webp" loading="lazy" decoding="async" alt="Judiciary of Tanzania Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+            <img src="images-icons/judiciary-logo-256.webp" width="256" height="256" loading="lazy" decoding="async" alt="Judiciary of Tanzania logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
           </div>
 
           <div class="absolute top-[38.3%] left-[86.1%] -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-36 sm:h-36 bg-white rounded-full shadow-xl shadow-slate-200/80 border border-slate-100 flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110 z-20 group">
-            <img src="images-icons/tra-256.webp" loading="lazy" decoding="async" alt="TRA Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+            <img src="images-icons/tra-256.webp" width="241" height="256" loading="lazy" decoding="async" alt="TRA logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
           </div>
 
           <div class="absolute top-[61.7%] left-[86.1%] -translate-x-1/2 -translate-y-1/2 w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full shadow-md shadow-slate-200/60 border border-slate-100 flex items-center justify-center p-3 transition-transform duration-300 hover:scale-110 z-20 group">
-            <img src="images-icons/nhc-logo-256.webp" loading="lazy" decoding="async" alt="NHC Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+            <img src="images-icons/nhc-logo-256.webp" width="256" height="256" loading="lazy" decoding="async" alt="National Housing Corporation (NHC) logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
           </div>
 
           <div class="absolute top-[80.7%] left-[72.3%] -translate-x-1/2 -translate-y-1/2 w-24 h-24 sm:w-28 sm:h-28 bg-white rounded-full shadow-md shadow-slate-200/50 border border-slate-100 flex items-center justify-center p-3 transition-transform duration-300 hover:scale-110 z-10 group">
-            <img src="images-icons/tpa-256.webp" loading="lazy" decoding="async" alt="TPA Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+            <img src="images-icons/tpa-256.webp" width="256" height="164" loading="lazy" decoding="async" alt="Tanzania Ports Authority (TPA) logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
           </div>
 
           <div class="absolute top-[88%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full shadow-lg shadow-slate-200/60 border border-slate-100 flex items-center justify-center p-3 transition-transform duration-300 hover:scale-110 z-20 group">
-            <img src="images-icons/embassy-kuwait-256.webp" loading="lazy" decoding="async" alt="Embassy of Kuwait Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+            <img src="images-icons/embassy-kuwait-256.webp" width="256" height="178" loading="lazy" decoding="async" alt="Embassy of the State of Kuwait logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
           </div>
 
           <div class="absolute top-[80.7%] left-[27.7%] -translate-x-1/2 -translate-y-1/2 w-24 h-24 sm:w-28 sm:h-28 bg-white rounded-full shadow-sm border border-slate-100 flex items-center justify-center p-2 transition-transform duration-300 hover:scale-110 z-10 group">
-            <img src="images-icons/andy-enterprises-256.webp" loading="lazy" decoding="async" alt="Andy Enterprises Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+            <img src="images-icons/andy-enterprises-256.webp" width="236" height="251" loading="lazy" decoding="async" alt="Andy Enterprises Ltd logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
           </div>
 
           <div class="absolute top-[61.7%] left-[13.9%] -translate-x-1/2 -translate-y-1/2 w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full shadow-md border border-slate-100 flex items-center justify-center p-3 transition-transform duration-300 hover:scale-110 z-10 group">
-            <img src="images-icons/jkt-256.webp" loading="lazy" decoding="async" alt="JKT Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+            <img src="images-icons/jkt-256.webp" width="256" height="256" loading="lazy" decoding="async" alt="JKT logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
           </div>
 
           <div class="absolute top-[38.3%] left-[13.9%] -translate-x-1/2 -translate-y-1/2 w-24 h-24 sm:w-28 sm:h-28 bg-white border border-slate-100 rounded-full shadow-sm flex items-center justify-center p-2 transition-transform duration-300 hover:scale-110 z-10 group">
-            <img src="images-icons/active-maintenance-256.webp" loading="lazy" decoding="async" alt="Active Maintenance Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+            <img src="images-icons/active-maintenance-256.webp" width="256" height="109" loading="lazy" decoding="async" alt="Active Maintenance Ltd logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
           </div>
 
           <div class="absolute top-[19.3%] left-[27.7%] -translate-x-1/2 -translate-y-1/2 w-20 h-20 sm:w-24 sm:h-24 bg-white border border-slate-100 rounded-full shadow-sm flex items-center justify-center p-2 transition-transform duration-300 hover:scale-110 z-10 group">
-            <img src="images-icons/bot-256.webp" loading="lazy" decoding="async" alt="BOT Logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
+            <img src="images-icons/bot-256.webp" width="256" height="256" loading="lazy" decoding="async" alt="Bank of Tanzania (BOT) logo" class="max-h-full max-w-full object-contain transition-all duration-300" />
           </div>
 
         </div>
@@ -638,17 +650,17 @@
   <!-- CTA -->
   <section class="pb-20 md:pb-28 bg-cream">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="relative overflow-hidden rounded-[2rem] bg-navy px-8 py-14 md:px-16 md:py-20 text-center fade-up">
+      <div class="on-dark relative overflow-hidden rounded-[2rem] bg-navy px-8 py-14 md:px-16 md:py-20 text-center fade-up">
         <div class="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-flame/30 blur-3xl"></div>
         <div class="absolute -bottom-24 -left-16 w-72 h-72 rounded-full bg-flame2/20 blur-3xl"></div>
         <div class="relative">
           <h2 class="font-display font-bold text-3xl md:text-5xl text-white mb-4 leading-tight">Let's build something together.</h2>
           <p class="text-slate-300 max-w-xl mx-auto mb-8">Talk to our team and see what Asknetic Group can do for your business in Tanzania.</p>
           <div class="flex flex-wrap justify-center gap-4">
-            <a href="services.html" class="inline-flex items-center gap-2 bg-flame hover:bg-black text-white px-8 py-3.5 rounded-full font-semibold transition-all hover:scale-105 shadow-lg hover:-translate-y-0.5">
+            <a href="services.html" class="inline-flex items-center gap-2 bg-flamedeep hover:bg-black text-white px-8 py-3.5 rounded-full font-semibold transition-all hover:scale-105 shadow-lg hover:-translate-y-0.5">
               View Our Services
             </a>
-            <a href="contact.html" class="inline-flex items-center gap-2 bg-flame hover:bg-black text-white px-8 py-3.5 rounded-full font-semibold transition-all hover:scale-105 shadow-lg hover:-translate-y-0.5">
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-flamedeep hover:bg-black text-white px-8 py-3.5 rounded-full font-semibold transition-all hover:scale-105 shadow-lg hover:-translate-y-0.5">
               Get in Touch
             </a>
           </div>
@@ -660,7 +672,7 @@
 </main>
 
 <!-- FOOTER -->
-<footer id="contact" class="relative bg-slate-950 text-slate-400 pt-16 pb-8 overflow-hidden">
+<footer id="contact" class="max-lg:pb-24 on-dark relative bg-slate-950 text-slate-400 pt-16 pb-8 overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 xl:px-24 relative z-10">
 
     <div class="pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 border-b border-slate-800/80">
@@ -673,53 +685,51 @@
           A diversified group of companies based in Dar es Salaam, delivering high-impact solutions across seven core operational sectors throughout Tanzania.
         </p>
         <div class="flex items-center gap-3">
-          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-black transition-all hover:scale-110"><i class="fa-brands fa-facebook-f text-sm"></i></a>
-          <a href="#" aria-label="Twitter" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-black transition-all hover:scale-110"><i class="fa-brands fa-x-twitter text-sm"></i></a>
-          <a href="https://www.instagram.com/asknetic.group/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-black transition-all hover:scale-110"><i class="fa-brands fa-instagram text-sm"></i></a>
-          <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-black transition-all hover:scale-110"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+          <!-- Facebook, X and LinkedIn icons removed until the official profile URLs are confirmed (owner decision, see LAUNCH-CHECKLIST.md). -->
+          <a href="https://www.instagram.com/asknetic.group/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-black transition-all hover:scale-110"><svg class="icon text-sm" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#fa-brands-instagram"></use></svg></a>
         </div>
       </div>
 
       <div class="fade-up lg:col-span-3">
-        <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-4">Our Services</h4>
+        <h2 class="text-white text-xs font-bold uppercase tracking-widest mb-4">Our Services</h2>
         <ul class="space-y-2 text-sm">
-          <li><a href="services.html#ict" class="hover:text-flame transition-colors">ICT &amp; Digital Solutions</a></li>
-          <li><a href="services.html#real-estate" class="hover:text-flame transition-colors">Real Estate Management</a></li>
-          <li><a href="services.html#agro" class="hover:text-flame transition-colors">Agro Crop Trading</a></li>
-          <li><a href="services.html#maintenance" class="hover:text-flame transition-colors">Building Maintenance</a></li>
-          <li><a href="services.html#car-hire" class="hover:text-flame transition-colors">Car Hire &amp; Logistics</a></li>
-          <li><a href="services.html#travel" class="hover:text-flame transition-colors">Travel &amp; Visa Assistance</a></li>
-          <li><a href="services.html#supplies" class="hover:text-flame transition-colors">General Supplies &amp; Services</a></li>
+          <li><a href="ict.html" class="hover:text-flame transition-colors">ICT &amp; Digital Solutions</a></li>
+          <li><a href="real-estate.html" class="hover:text-flame transition-colors">Real Estate Management</a></li>
+          <li><a href="agro.html" class="hover:text-flame transition-colors">Agro Crop Trading</a></li>
+          <li><a href="maintenance.html" class="hover:text-flame transition-colors">Building Maintenance</a></li>
+          <li><a href="car-hire.html" class="hover:text-flame transition-colors">Car Hire &amp; Logistics</a></li>
+          <li><a href="travel.html" class="hover:text-flame transition-colors">Travel &amp; Visa Assistance</a></li>
+          <li><a href="supplies.html" class="hover:text-flame transition-colors">General Supplies &amp; Services</a></li>
         </ul>
       </div>
 
       <div class="fade-up lg:col-span-2">
-        <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-4">Office Address</h4>
+        <h2 class="text-white text-xs font-bold uppercase tracking-widest mb-4">Office Address</h2>
         <address class="not-italic text-sm leading-relaxed space-y-1">
-          <p class="text-slate-300 font-medium"><i class="fa-solid fa-map-marker-alt text-flame mr-2"></i>Peninsula Noble Center</p>
-          <p><i class="fa-solid fa-envelope text-flame mr-2"></i>Oysterbay, PO Box 3176</p>
+          <p class="text-slate-300 font-medium"><svg class="icon text-flame mr-2" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><use href="#fa-solid-location-dot"></use></svg>Peninsula Noble Center</p>
+          <p><svg class="icon text-flame mr-2" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#fa-solid-envelope"></use></svg>Oysterbay, PO Box 3176</p>
           <p>Dar es Salaam, Tanzania</p>
         </address>
       </div>
 
       <div class="fade-up lg:col-span-3">
-        <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-4">Get In Touch</h4>
+        <h2 class="text-white text-xs font-bold uppercase tracking-widest mb-4">Get In Touch</h2>
         <ul class="space-y-2.5 text-sm">
           <li>
             <a href="mailto:info@askneticgroup.co.tz" class="flex items-center gap-3 hover:text-flame transition-colors">
-              <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-flame shrink-0"><i class="fa-solid fa-envelope text-xs"></i></span>
+              <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-flame shrink-0"><svg class="icon text-xs" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#fa-solid-envelope"></use></svg></span>
               <span class="break-all">info@askneticgroup.co.tz</span>
             </a>
           </li>
           <li>
             <a href="tel:+255767911211" class="flex items-center gap-3 hover:text-flame transition-colors">
-              <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-flame shrink-0"><i class="fa-solid fa-phone text-xs"></i></span>
+              <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-flame shrink-0"><svg class="icon text-xs" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#fa-solid-phone"></use></svg></span>
               <span>+255 767 911 211</span>
             </a>
           </li>
           <li>
             <a href="tel:+255655911211" class="flex items-center gap-3 hover:text-flame transition-colors">
-              <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-flame shrink-0"><i class="fa-solid fa-phone text-xs"></i></span>
+              <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-flame shrink-0"><svg class="icon text-xs" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#fa-solid-phone"></use></svg></span>
               <span>+255 655 911 211</span>
             </a>
           </li>
@@ -728,11 +738,10 @@
 
     </div>
 
-    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
       <p>© <span id="footer-year">2026</span> Asknetic Enterprises Ltd. All rights reserved.</p>
       <div class="flex items-center gap-6">
-        <a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
-        <a href="#" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+        <!-- Privacy Policy and Terms of Service links go here once approved policy pages exist (owner decision, see LAUNCH-CHECKLIST.md). -->
         <span class="text-slate-400 font-semibold">www.askneticgroup.co.tz</span>
       </div>
     </div>
@@ -740,108 +749,19 @@
   </div> 
 </footer>
 
-<!-- FLOATING CTA CONTROLS -->
-<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
-  <button id="backToTop" type="button" aria-label="Back to top" class="w-11 h-11 rounded-full bg-flamedeep hover:bg-black text-white flex items-center justify-center shadow-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-flame">
-    <i class="fa-solid fa-arrow-up text-sm"></i>
+<aside aria-label="Quick contact" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-center gap-3">
+  <button id="backToTop" type="button" aria-label="Back to top" class="focus-halo w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-flamedeep hover:bg-black text-white flex items-center justify-center shadow-lg">
+    <svg class="icon" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><use href="#fa-solid-arrow-up"></use></svg>
   </button>
-
-  <a href="https://wa.me/255655911211?text=Hello%20Asknetic%20Group,%20I%20would%20like%20to%20inquire%20about%20your%20services." 
-     target="_blank" 
-     rel="noopener noreferrer" 
-    class="bg-[#25D366] hover:bg-black text-white w-12 h-12 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-300 group relative"
-     aria-label="Chat with us on WhatsApp">
-    <i class="fa-brands fa-whatsapp text-2xl"></i>
-    <span class="absolute right-full mr-3 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md pointer-events-none">
-      Chat with us on WhatsApp
-    </span>
+  <a href="https://wa.me/255655911211?text=Hello%20Asknetic%20Group,%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp (opens in a new tab)" class="focus-halo group relative bg-[#25D366] hover:bg-[#20ba5a] text-white p-3 sm:p-4 rounded-full shadow-2xl flex items-center justify-center transition-transform duration-300 hover:scale-110">
+    <svg class="icon text-2xl sm:text-3xl" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#fa-brands-whatsapp"></use></svg>
+    <span class="absolute right-full mr-3 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-200 shadow-md pointer-events-none" aria-hidden="true">Chat with us on WhatsApp</span>
   </a>
-</div>
+</aside>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var footerYear = document.getElementById('footer-year');
-    if (footerYear) footerYear.textContent = new Date().getFullYear();
-
-    var siteHeader = document.getElementById('site-header');
-    if (siteHeader) {
-      var handleHeaderScroll = function () {
-        if (window.scrollY > 20) {
-          siteHeader.classList.add('shadow-lg');
-        } else {
-          siteHeader.classList.remove('shadow-lg');
-        }
-      };
-      handleHeaderScroll();
-      window.addEventListener('scroll', handleHeaderScroll);
-    }
-
-    // Toggle Desktop Submenu
-    var sectorsBtn = document.getElementById('sectorsBtn');
-    var sectorsMenu = document.getElementById('sectorsMenu');
-    var sectorsArrow = document.getElementById('sectorsArrow');
-    var sectorsWrap = sectorsBtn ? sectorsBtn.closest('li') : null;
-    var sectorsCloseTimer = null;
- 
-    function openSectors() {
-      clearTimeout(sectorsCloseTimer);
-      sectorsMenu.classList.remove('hidden');
-      sectorsBtn.setAttribute('aria-expanded', 'true');
-      if (sectorsArrow) sectorsArrow.classList.add('rotate-180');
-    }
- 
-    function closeSectorsDelayed() {
-      clearTimeout(sectorsCloseTimer);
-      sectorsCloseTimer = setTimeout(function () {
-        sectorsMenu.classList.add('hidden');
-        sectorsBtn.setAttribute('aria-expanded', 'false');
-        if (sectorsArrow) sectorsArrow.classList.remove('rotate-180');
-      }, 150);
-    }
- 
-    if (sectorsWrap && sectorsBtn && sectorsMenu) {
-      sectorsWrap.addEventListener('mouseenter', openSectors);
-      sectorsWrap.addEventListener('mouseleave', closeSectorsDelayed);
- 
-      sectorsBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        var isOpen = !sectorsMenu.classList.contains('hidden');
-        if (isOpen) {
-          sectorsMenu.classList.add('hidden');
-          sectorsBtn.setAttribute('aria-expanded', 'false');
-          if (sectorsArrow) sectorsArrow.classList.remove('rotate-180');
-        } else {
-          openSectors();
-        }
-      });
-    }
-
-    // Mobile Navigation Toggle
-    var toggle = document.getElementById('navtoggle');
-    var toggleIcon = document.getElementById('navtoggle-icon');
-    var mobileMenu = document.getElementById('mobilemenu');
-
-    if (toggle && mobileMenu) {
-      toggle.addEventListener('click', function () {
-        mobileMenu.classList.toggle('hidden');
-        var isOpen = !mobileMenu.classList.contains('hidden');
-        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        if (toggleIcon) toggleIcon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
-      });
-    }
-
-    // Mobile Submenu Toggle
-    var mobileSectorsBtn = document.getElementById('mobileSectorsBtn');
-    var mobileSectorsMenu = document.getElementById('mobileSectorsMenu');
-    var mobileSectorsArrow = document.getElementById('mobileSectorsArrow');
-    if (mobileSectorsBtn && mobileSectorsMenu) {
-      mobileSectorsBtn.addEventListener('click', function() {
-        mobileSectorsMenu.classList.toggle('hidden');
-        if (mobileSectorsArrow) mobileSectorsArrow.classList.toggle('rotate-180');
-      });
-    }
-
-    // Intersection Observer Animations
+  (function () {
+    // Fade-up reveal
     var fadeUpEls = document.querySelectorAll('.fade-up');
     if ('IntersectionObserver' in window) {
       var observer = new IntersectionObserver(function (entries) {
@@ -857,23 +777,11 @@
       fadeUpEls.forEach(function (el) { el.classList.add('in-view'); });
     }
 
-    // Back to top Button
-    var btn = document.getElementById('backToTop');
-    if (btn) {
-      window.addEventListener('scroll', function () {
-        btn.classList.toggle('show', window.scrollY > 400);
-      });
-      btn.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    // Count-up stats
+    // Count-up stats. The real values are in the HTML (shown without JavaScript or with reduced motion).
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var counters = document.querySelectorAll('[data-count]');
     function run(el) {
       var target = parseInt(el.getAttribute('data-count'), 10);
-      if (reduce) { el.textContent = target; return; }
       var start = null, dur = 1400;
       function step(t) {
         if (start === null) start = t;
@@ -883,48 +791,13 @@
       }
       requestAnimationFrame(step);
     }
-    if ('IntersectionObserver' in window) {
+    if (!reduce && 'IntersectionObserver' in window) {
       var co = new IntersectionObserver(function (entries) {
         entries.forEach(function (en) { if (en.isIntersecting) { run(en.target); co.unobserve(en.target); } });
       }, { threshold: 0.6 });
-      counters.forEach(function (c) { co.observe(c); });
-    } else { counters.forEach(run); }
-
-    // Core values tabs
-    var tabs = Array.prototype.slice.call(document.querySelectorAll('.val-tab'));
-    var panels = Array.prototype.slice.call(document.querySelectorAll('.val-panel'));
-    var idx = document.getElementById('val-index');
-    function select(n, focus) {
-      tabs.forEach(function (t, i) {
-        var on = i === n;
-        t.setAttribute('aria-selected', on ? 'true' : 'false');
-        t.tabIndex = on ? 0 : -1;
-        panels[i].hidden = !on;
-      });
-      if (idx) idx.textContent = ('0' + (n + 1)).slice(-2);
-      if (focus) tabs[n].focus();
+      counters.forEach(function (c) { c.textContent = '0'; co.observe(c); });
     }
-    tabs.forEach(function (t, i) {
-      t.addEventListener('click', function () { select(i, false); });
-      t.addEventListener('keydown', function (e) {
-        var k = e.key, n = null;
-        if (k === 'ArrowDown' || k === 'ArrowRight') n = (i + 1) % tabs.length;
-        else if (k === 'ArrowUp' || k === 'ArrowLeft') n = (i - 1 + tabs.length) % tabs.length;
-        else if (k === 'Home') n = 0;
-        else if (k === 'End') n = tabs.length - 1;
-        if (n !== null) { e.preventDefault(); select(n, true); }
-      });
-    });
-
-    // Clients marquee
-    var list = document.getElementById('clientsA');
-    if (list && list.parentNode) {
-      var clone = list.cloneNode(true);
-      clone.removeAttribute('id');
-      clone.setAttribute('aria-hidden', 'true');
-      list.parentNode.appendChild(clone);
-    }
-  });
+  })();
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
