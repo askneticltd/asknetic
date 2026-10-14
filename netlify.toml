@@ -1,0 +1,13 @@
+# Netlify build settings (these override the ones in the Netlify UI).
+# `npm run build` only refreshes files in place; `npm run package` writes dist/, the same
+# allowlisted upload that goes to cPanel (see DEPLOYMENT.md). Do not publish "." - that would
+# expose private/, drafts/, src/, scripts/ and the Markdown files, and Netlify ignores .htaccess.
+[build]
+  command = "npm run build && npm run package"
+  publish = "dist"
+
+# Netlify is only a review copy: keep search engines from indexing it. cPanel never sees this file.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
