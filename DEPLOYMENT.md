@@ -62,7 +62,7 @@ and text on dark backgrounds.
 - `api/contact.php`
 - `assets/` (CSS, JS, fonts and their licence files)
 - `Asknetic-Company-Profile-web.pdf` (the 1.9 MB web copy linked from about-us.html; the original is 7.6 MB)
-- only the `images-icons/` files that a page references (currently 91 of 124)
+- only the `images-icons/` files that a page references (currently 97 of 132)
 
 **Never upload:** `.git/`, `private/`, `drafts/`, `node_modules/`, `src/`, `scripts/`, `dist/` itself, `package*.json`,
 `tailwind.config.js`, the Markdown files, the original `Asknetic-Company-Profile.pdf` (7.6 MB), or the
@@ -83,7 +83,7 @@ files, `private/`, `drafts/`, `src/`, `scripts/`, `node_modules/` and similar pa
 
 ### About `.htaccess`
 
-It was tested on Apache 2.4.58 locally against the `npm run package` output (119 checks on 14 October 2026):
+It was tested on Apache 2.4.58 locally against the `npm run package` output (119 checks, last run on 15 October 2026):
 redirects, blocked paths, directory listings, the 404 page, compression, caching, content types and security
 headers. A host can still differ, so verify it live. If the site shows
 "500 Internal Server Error" right after upload, the host may not allow one of the directives: the usual

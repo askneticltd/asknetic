@@ -134,14 +134,35 @@ html { scroll-padding-top: 6rem; }
   .wordmark-group { font-size: .9375rem; }
 }
 
-/* About Us hero overlay (navysoft #352D27). Lighter than the former flat 85%: a soft scrim stays about 86% dark
-   only behind the text block (sized in px, so it follows the text at every width) and fades to 40% at the top
-   and 30% at the bottom. The sunlit window and wall in ceo3 sit behind the heading, so the darker orange of
-   "Asknetic Group" (#E17A2E) needs that 86% to keep 3:1; flat 60-70% overlays left it at 1.8-2.2:1. */
-.about-hero-overlay {
-  background-image:
-    radial-gradient(ellipse 600px 240px at 50% 41%, rgb(53 45 39 / .77) 0%, rgb(53 45 39 / .72) 50%, rgb(53 45 39 / 0) 100%),
-    linear-gradient(to bottom, rgb(53 45 39 / .4) 0%, rgb(53 45 39 / .4) 60%, rgb(53 45 39 / .3) 100%);
+/* About Us hero: the ceo3 photo has no overlay of its own (the former flat overlay was 85%). Only the text is
+   protected, by a soft navysoft (#352D27) scrim attached to the text block, so it grows and moves with the text
+   (wrapping, zoom, larger fonts): a compact core at 81% plus a wide 35% halo that softens its edge, about 88%
+   together right behind the text. The sunlit wall and window sit behind the heading, and the darker orange end
+   of "Asknetic Group" (#E17A2E) needs that 88% to keep 3:1 there; any flat overlay under 85% fails it (80%: 2.7:1).
+   Measured in Chrome at 17 widths from 320 to 2560 px, see LAUNCH-CHECKLIST.md. */
+.about-hero-copy {
+  position: relative;
+  width: fit-content;
+  margin-inline: auto;
+}
+.about-hero-copy::before,
+.about-hero-copy::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+.about-hero-copy::before {
+  inset: -2.5rem;
+  border-radius: 2rem;
+  filter: blur(1.5rem);
+  background: rgb(53 45 39 / .81);
+}
+.about-hero-copy::after {
+  inset: -5rem -7rem;
+  border-radius: 6rem;
+  filter: blur(4rem);
+  background: rgb(53 45 39 / .35);
 }
 
 /* No continuous or decorative motion for visitors who ask for reduced motion (WCAG 2.3.3). */

@@ -3,7 +3,8 @@
 ceo3.jpg is the original and is left untouched (despite its name it is a 1672x941 PNG file with no colour
 profile). It is not uploaded: only the WebP files below are referenced by the page.
 If the About Us hero should show a different photo, replace ceo3.jpg and run this script again.
-The hero <img> fills its section with object-fit: cover, centred, under a dark gradient overlay. Measured in
+The hero <img> fills its section with object-fit: cover, centred, with no overlay of its own (a soft scrim sits
+behind the text only, see .about-hero-copy in src/site.css). Measured in
 Chrome, the photo renders at these CSS widths (which the <img> sizes attribute repeats):
 - viewports up to 767 px: the box is 424 px tall, so the photo is scaled to the box height (753 px wide)
   and only its centre column shows;
