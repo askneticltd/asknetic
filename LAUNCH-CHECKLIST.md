@@ -76,7 +76,9 @@ input. None of them should be guessed by a developer.
   approach and the privacy notice.
 - [ ] **Social preview image.** `images-icons/og-image.jpg` is a crop of the existing homepage photo. A branded
   1200x630 image (logo and tagline) can replace it if the owner supplies or approves one.
-- [ ] **Favicon.** Made from the flame mark of the existing logo on the header colour. Replace it if the owner has an official icon.
+- [ ] **Favicon.** Made from the flame mark of the existing logo on the header colour: `favicon.ico` (16/32/48),
+  `images-icons/favicon-96.png` (the size Google asks for) and `apple-touch-icon.png` (180). Replace them if the
+  owner has an official icon (re-run `scripts/make-brand-icons.py` with the new source).
 - [ ] **Optional: larger photos for two service heroes.** The supplied `visa.jpg` (travel.html, 1254 px wide) and
   `car-hire.jpg` (car-hire.html, 1024 px) are served at their full size, but the hero is as wide as the window, so
   browsers enlarge them on screens wider than about 1250 / 1020 px (and on 2x tablets), which looks slightly soft.
@@ -117,3 +119,16 @@ Each must be run against the live site and the output kept as a record.
 - [ ] Manual pass on a real Android phone and an iPhone (Safari), and a short screen-reader check (NVDA or VoiceOver).
 - [ ] After a few days of working HTTPS on both hostnames: enable HSTS as described in `DEPLOYMENT.md`.
 - [ ] Take down the Netlify preview, or mark it `noindex`, so it does not compete with the real site in search results.
+
+### Search result branding (site name "Asknetic Enterprises Limited" and the favicon)
+
+- [ ] `curl -s https://www.askneticgroup.co.tz/ | grep -E '<title>|og:site_name|rel="(icon|canonical)"'` shows the
+  "Asknetic Enterprises Limited | Business Services in Tanzania" title, that `og:site_name`, the canonical
+  `https://www.askneticgroup.co.tz/` and both icon links.
+- [ ] `curl -sI https://www.askneticgroup.co.tz/images-icons/favicon-96.png` and `.../favicon.ico` → `200` with
+  `Content-Type: image/png` / `image/x-icon` (not `text/html`).
+- [ ] The home page's JSON-LD passes <https://validator.schema.org/> with one `WebSite` and one `Organization`, no errors.
+- [ ] Google Search Console > URL Inspection on `https://www.askneticgroup.co.tz/`: "URL is on Google" or
+  available, indexing allowed, Googlebot smartphone crawl allowed; Test live URL, then Request indexing.
+  The Rich Results Test does not check site names. Google picks the site name and favicon itself and can take
+  days to weeks to update them after recrawling the home page.

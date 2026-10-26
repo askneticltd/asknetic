@@ -3,6 +3,8 @@
 - Favicons: the flame mark is cut out of the existing logo (ask-logo-blvk.png / ask-logo-white.png
   differ only in the wordmark colour, so the pixels they share are the mark) and placed on the
   header colour (#352D27), where the logo already appears on the site. No new artwork is drawn.
+  favicon-96.png is the icon search engines pick up (Google asks for a multiple of 48 px);
+  favicon.ico (16/32/48) covers browser tabs and /favicon.ico requests.
 - Social preview (og:image, 1200x630): a crop of the existing homepage hero photo
   (IMG_2562.PNG, the original of asknetic-home-hero-*.webp).
 
@@ -34,7 +36,7 @@ def icon(size):
     return canvas.convert('RGB')
 
 
-icon(32).save(IMG / 'favicon-32.png', optimize=True)
+icon(96).save(IMG / 'favicon-96.png', optimize=True)
 icon(180).save(IMG / 'apple-touch-icon.png', optimize=True)
 icon(48).save(ROOT / 'favicon.ico', sizes=[(16, 16), (32, 32), (48, 48)])
 
@@ -44,5 +46,5 @@ top = 80  # keeps the faces in frame (the hero itself is anchored to the top)
 hero.crop((0, top, hero.width, top + crop_h)).resize((1200, 630), Image.LANCZOS).save(
     IMG / 'og-image.jpg', 'JPEG', quality=82, optimize=True, progressive=True)
 
-for f in (IMG / 'favicon-32.png', IMG / 'apple-touch-icon.png', ROOT / 'favicon.ico', IMG / 'og-image.jpg'):
+for f in (IMG / 'favicon-96.png', IMG / 'apple-touch-icon.png', ROOT / 'favicon.ico', IMG / 'og-image.jpg'):
     print(f.relative_to(ROOT), f.stat().st_size, 'bytes')
