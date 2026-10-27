@@ -1,15 +1,38 @@
-// Shared behaviour for every page: header shadow, desktop Services dropdown, mobile menu,
+// Shared behaviour for every page: hide-on-scroll header, desktop Services dropdown, mobile menu,
 // back-to-top button and footer year. Page-specific scripts (reveal effects, forms) stay inline.
 (function () {
   var $ = function (id) { return document.getElementById(id); };
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  // Header shadow once the page scrolls
+  // Header: frosted glass once the page scrolls (is-scrolled); slides away while scrolling down and
+  // comes back on any scroll up (is-hidden). It stays in view near the top of the page, while the
+  // Services dropdown or the mobile menu is open, and while it holds keyboard focus.
   var header = $('site-header');
   if (header) {
-    var onHeaderScroll = function () { header.classList.toggle('shadow-lg', window.scrollY > 20); };
-    onHeaderScroll();
-    window.addEventListener('scroll', onHeaderScroll, { passive: true });
+    var headerMenus = [$('sectorsMenu'), $('mobilemenu')].filter(Boolean);
+    var lastY = Math.max(window.scrollY, 0), ticking = false;
+    var keepHeader = function () {
+      if (headerMenus.some(function (m) { return !m.classList.contains('hidden'); })) return true;
+      var el = document.activeElement;
+      try { return header.contains(el) && el.matches(':focus-visible'); } catch (e) { return false; }
+    };
+    var updateHeader = function () {
+      ticking = false;
+      var y = Math.max(window.scrollY, 0); // iOS overscroll can go below 0
+      header.classList.toggle('is-scrolled', y > 0);
+      if (y < header.offsetHeight || keepHeader()) {
+        header.classList.remove('is-hidden');
+        lastY = y;
+      } else if (Math.abs(y - lastY) > 8) { // ignore small jitters (trackpads, the mobile address bar)
+        header.classList.toggle('is-hidden', y > lastY);
+        lastY = y;
+      }
+    };
+    updateHeader();
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(updateHeader); }
+    }, { passive: true });
+    header.addEventListener('focusin', function () { header.classList.remove('is-hidden'); });
   }
 
   // Desktop Services dropdown: hover (with a short close delay), click, Escape, outside click, focus leaving

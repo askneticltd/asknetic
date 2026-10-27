@@ -98,6 +98,46 @@ main[tabindex="-1"]:focus { outline: none; }
    below it, so a focused control is never hidden behind it, e.g. on Shift+Tab (WCAG 2.4.11). */
 html { scroll-padding-top: 6rem; }
 
+/* Frosted dark glass: the header once the page scrolls, the Services dropdown and the mobile menu.
+   Contrast is measured for the worst case, a white section behind the glass: navy at 84% over the
+   backdrop darkened to 50% gives white text 13.8:1, the #FF914D "GROUP" 6.2:1 and the #E17A2E hover
+   colour 4.6:1, all at least what solid navysoft gives (4.5:1 for #E17A2E). Browsers without
+   backdrop-filter get solid navysoft. */
+.glass-dark,
+#site-header.is-scrolled::before {
+  background-color: rgb(33 28 24 / .84);
+  -webkit-backdrop-filter: saturate(180%) blur(18px) brightness(.5);
+  backdrop-filter: saturate(180%) blur(18px) brightness(.5);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass-dark,
+  #site-header.is-scrolled::before { background-color: #352D27; }
+}
+
+/* Header: solid navysoft at the top of the page, frosted glass once it scrolls, and it slides away
+   while scrolling down and comes back on any scroll up (classes set by assets/js/site.js; without
+   JavaScript it simply stays solid and sticky). The background sits on ::before, not on the header
+   itself: an element with backdrop-filter limits its children's backdrop-filter to its own box, which
+   would stop the dropdown, which hangs below the header, from blurring the page. ::before reaches
+   1px lower to sit under the bottom border, so no light line shows between header and hero. */
+#site-header {
+  transition: transform .35s cubic-bezier(.2, .8, .2, 1), box-shadow .3s ease;
+}
+#site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 -1px;
+  z-index: -1;
+  background-color: #352D27;
+  transition: background-color .3s ease;
+}
+#site-header.is-scrolled { box-shadow: 0 12px 32px -12px rgb(17 16 15 / .45); }
+#site-header.is-hidden { transform: translateY(-100%); box-shadow: none; }
+@media (prefers-reduced-motion: reduce) {
+  #site-header,
+  #site-header::before { transition: none; }
+}
+
 /* Header wordmark on every page: real text in place of the logo image, with the logo artwork's
    proportions ("GROUP" about half the height and width of "ASKNETIC", gap about a third of its
    letter height). The link keeps the image's 4rem box, so the header stays 89 px tall. "GROUP" in #FF914D is
